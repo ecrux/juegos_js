@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Juego JS</title>
+	<script type="text/javascript" src="js/funciones_portafolio.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/tether.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<div id="line"></div>
+<div class="container-fluid">
+	<div class="row" style="background-color: #7B7D7D;color: #ffffff">
+		<h1 class="container">HOL@ MUND0</h1>
+	</div>
+
+	<div class="row">
+
+		<!-- Estadisticas del juego -->
+		<div class="col-xs-2">
+			<div id="result">
+				<h3 id="name_user"></h3>
+				<hr>
+			</div>
+
+			<ul class="list-group">
+			  <li class="list-group-item justify-content-between">
+			    Cantidad de preguntas
+			    <span class="badge badge-default badge-pill" id="count_question">0</span>
+			  </li>
+			  <li class="list-group-item justify-content-between">
+			    Respuestas acertadas
+			    <span class="badge badge-default badge-pill" id="r_correct">0</span>
+			  </li>
+			  <li class="list-group-item justify-content-between">
+			    Respuestas erroneas
+			    <span class="badge badge-default badge-pill" id="r_ncorrect">0</span>
+			  </li>
+			  <li class="list-group-item justify-content-between">
+			    Score
+			    <span class="badge badge-default badge-pill" id="container_points">0</span>
+			  </li>
+			</ul>
+
+			<center id="result_clock">
+				<img width="60%" src="img/relog.png"><br>
+				<b>
+					<div id="result">
+						<input type="text" class="clock" id="min" disabled>:
+						<input type="text" class="clock" id="seg" disabled>
+					</div>
+				</b>
+			</center>
+
+		</div>
+
+
+		<!-- Cuerpo del juego -->
+		<div class="col-xs-10" style="background-color: #EAEDED; height: 700px; ">
+				<div class="row">
+					<button class="btn btn-warning" onclick="play_star();"> Play Star </button>
+					<button class="btn btn-success pull-right" id="button_next" onclick="painting_elements()">Next Question</button>
+				</div>
+
+				<!-- Container of the questions -->
+				<div class="row well" id="container_question">
+					<b>Bienvenid@ </b> Juega y gana...!!! Suerte.</div>
+
+				<!-- Contenedor de las frutas -->
+				<div id="container_fruit">
+				</div>
+		</div>
+
+	</div>
+
+
+	
+	<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+	  <!-- Modal -->
+	  <div class="modal fade" id="myModal" role="dialog">
+	    <div class="modal-dialog">
+	    
+	      <!-- Modal content-->
+	      <div class="modal-content">
+	        <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h4 class="modal-title" id="title_modal" ><b>Juego Finalizado</b></h4>
+	        </div>
+	        <div class="modal-body">
+	          <!-- Cuerpo modal -->
+	          	<ul class="list-group">
+				  <li class="list-group-item justify-content-between">
+				    Cantidad de preguntas
+				    <span class="badge badge-default badge-pill" id="count_question_modal">0</span>
+				  </li>
+				  <li class="list-group-item justify-content-between">
+				    Respuestas acertadas
+				    <span class="badge badge-default badge-pill" id="r_correct_modal">0</span>
+				  </li>
+				  <li class="list-group-item justify-content-between">
+				    Respuestas erroneas
+				    <span class="badge badge-default badge-pill" id="r_ncorrect_modal">0</span>
+				  </li>
+				  <li class="list-group-item justify-content-between">
+				    Score
+				    <span class="badge badge-default badge-pill" id="container_points_modal">0</span>
+				  </li>
+				</ul>
+				<div id="total"></div>
+				<div>
+					<h3><center ><b>Time : </b></center></h3><div id="time"></div>
+					
+				</div>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+	      
+	    </div>
+	  </div>
+	  <!-- End modal -->
+</div>
+</body>
+</html>
