@@ -1,0 +1,2 @@
+
+En esta carpeta se encuentra el sitio como tal.
